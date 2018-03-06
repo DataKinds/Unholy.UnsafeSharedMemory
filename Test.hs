@@ -1,6 +1,6 @@
 module Main where
 
-import Foreign.UnsafeSharedMemory
+import Unholy.UnsafeSharedMemory
 import Foreign.C.String
 import Foreign.C.Types
 import Control.Monad

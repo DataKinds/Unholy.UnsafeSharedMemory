@@ -1,18 +1,18 @@
-test: Foreign/UnsafeSharedMemory.o Foreign/SharedMemory.o
+test: Unholy/UnsafeSharedMemory.o Unholy/SharedMemory.o
 	ghc -c -o Test.o Test.hs
-	ghc -o Test Foreign/UnsafeSharedMemory.o Foreign/SharedMemory.o Test.o
+	ghc -o Test Unholy/UnsafeSharedMemory.o Unholy/SharedMemory.o Test.o
 
-libs: Foreign/UnsafeSharedMemory.o Foreign/SharedMemory.o
+libs: Unholy/UnsafeSharedMemory.o Unholy/SharedMemory.o
 
-Foreign/SharedMemory.o:
-	ghc -c Foreign/SharedMemory.c
+Unholy/SharedMemory.o:
+	ghc -c Unholy/SharedMemory.c
 
-Foreign/UnsafeSharedMemory.o:
-	ghc -c Foreign/UnsafeSharedMemory.hs
+Unholy/UnsafeSharedMemory.o:
+	ghc -c Unholy/UnsafeSharedMemory.hs
 
 clean:
 	-rm *.hi
 	-rm *.o
-	-rm Foreign/*.hi
-	-rm Foreign/*.o
+	-rm Unholy/*.hi
+	-rm Unholy/*.o
 	-rm Test
