@@ -1,4 +1,4 @@
-module Foreign.UnsafeSharedMemory where
+module Unholy.UnsafeSharedMemory where
 
 import Control.Monad.Trans.Maybe
 import Control.Monad.Trans.Class
